@@ -1,6 +1,6 @@
 from docling.document_converter import DocumentConverter
 
-source = "Dummy_CV_as_PDF.pdf"
+source = "CV Mohammed Amine EL BOUKBIRI.pdf"
 converter = DocumentConverter()
 doc = converter.convert(source).document
 output=doc.export_to_markdown()
@@ -57,18 +57,20 @@ def output_parsing(output: str) -> dict:
         "CERTIFICATIONS": [],
         "LANGUAGES": [],
         "OTHER": [],
+        
     }
 
     # 2) Header aliases: many possible titles -> one bucket
     
     aliases = {
-        "SUMMARY": ["summary", "profile", "about", "profil", "résumé", "resume", "a propos", "à propos", "objectif"],
-        "SKILLS": ["skills", "technical skills", "core skills", "competencies", "competences", "compétences", "compétences techniques", "technologies", "stack"],
-        "EXPERIENCE": ["experience", "work experience", "employment", "professional experience", "expérience", "expériences", "expérience professionnelle", "parcours", "stage", "stages", "internship", "internships"],
-        "EDUCATION": ["education", "academic background", "formation", "éducation", "parcours académique", "diplômes", "diplomes"],
-        "PROJECTS": ["projects", "project", "personal projects", "academic projects", "projets", "projet", "projets académiques", "projets personnels"],
-        "CERTIFICATIONS": ["certifications", "certification", "certificates", "certificate", "attestations", "attestation"],
-        "LANGUAGES": ["languages", "language", "langues", "langue"],
+        "HEADER": ["HEADER","header", "Contact", "Contacts", "Identity", "identité", "Coordonnées", "Coordonnees", "Personal info", "Personal information", "Informations personnelles"],
+        "SUMMARY": ["Summary","SUMMARY", "Profile", "About", "Profil", "Résumé", "Resume", "A propos", "A propos", "Objectif"],
+        "SKILLS": ["skills","SKILLS", "technical skills", "core skills","Compétances", "competencies", "competences", "compétences", "compétences techniques", "technologies", "stack"],
+        "EXPERIENCE": ["experience","EXPERIENCE", "work experience", "employment", "professional experience", "expérience", "expériences", "expérience professionnelle", "parcours", "stage", "stages", "internship", "internships"],
+        "EDUCATION": ["Education","EDUCATION","Academic background", "Formation", "éducation", "parcours académique", "diplômes", "diplomes"],
+        "PROJECTS": ["Projects","projects","PROJECTS", "project", "personal projects", "academic projects","Projet","projets", "projet", "projets académiques", "projets personnels"],
+        "CERTIFICATIONS": ["certifications","CERTIFICATION","Certifications","certification", "certificates", "certificate", "attestations", "attestation","Certificat","certificats"],
+        "LANGUAGES": ["languages","LANGUAGES", "language", "langues", "langue","Languages"],
     }
 
     # 3) Helper: decide whether a line is *probably* a header line
@@ -157,7 +159,14 @@ def output_parsing(output: str) -> dict:
 
 
 parsed = output_parsing(output)
-print("\n--- Parsed Sections ---\n")
-for k, v in parsed.items():
-    print(f"{k}: {v} ")
-    
+#print("\n--- Parsed Sections ---\n")
+#for k, v in parsed.items():
+#    print(f"{k}: {v} ")
+
+#-------------------------------------
+# final phase : convert parsed data to Json format
+#-------------------------------------
+import json 
+
+Json_OUTPUT=json.dumps(parsed,indent=4,separators=('//'))
+print(Json_OUTPUT)
