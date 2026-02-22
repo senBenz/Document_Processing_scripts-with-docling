@@ -1,11 +1,12 @@
 from docling.document_converter import DocumentConverter
 
-source = "CV Mohammed Amine EL BOUKBIRI.pdf"
+source = "CV_.pdf"
 converter = DocumentConverter()
 doc = converter.convert(source).document
 output=doc.export_to_markdown()
 #print(output)
 
+from OCR import OCR
 
 # the text now is extracted but it need to be parse-friendly  for better handling 
 #----------------------------------------
@@ -64,7 +65,7 @@ def output_parsing(output: str) -> dict:
     
     aliases = {
         "HEADER": ["HEADER","header", "Contact", "Contacts", "Identity", "identité", "Coordonnées", "Coordonnees", "Personal info", "Personal information", "Informations personnelles"],
-        "SUMMARY": ["Summary","SUMMARY", "Profile", "About", "Profil", "Résumé", "Resume", "A propos", "A propos", "Objectif"],
+        "SUMMARY": ["Summary","SUMMARY", "PROFIL", "About", "Profil", "Résumé", "Resume", "A propos", "A propos", "Objectif"],
         "SKILLS": ["skills","SKILLS", "technical skills", "core skills","Compétances", "competencies", "competences", "compétences", "compétences techniques", "technologies", "stack"],
         "EXPERIENCE": ["experience","EXPERIENCE", "work experience", "employment", "professional experience", "expérience", "expériences", "expérience professionnelle", "parcours", "stage", "stages", "internship", "internships"],
         "EDUCATION": ["Education","EDUCATION","Academic background", "Formation", "éducation", "parcours académique", "diplômes", "diplomes"],
