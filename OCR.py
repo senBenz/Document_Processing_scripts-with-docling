@@ -6,12 +6,24 @@
 
 from pdf2image import convert_from_path
 
-User_CV = '.pdf'
+
+User_CV = 'CV_.pdf'
+#output_folder = "converted_images"
 pages = convert_from_path(User_CV)
 
+  # THE variable `pages` is a list of image objects corresponding to each page of the PDF. 
 
-    # THE variable `pages` is a list of image objects corresponding to each page of the PDF. 
+#--------------------------------------------------------------------
+# Saving the converted images to a folder for later use in OCR processing.
+#import os
+#os.makedirs(output_folder, exist_ok=True)
 
+#for i, page in enumerate(pages):
+#    image_path = os.path.join(output_folder, f"page_{i+1}.png")
+#    page.save(image_path, "PNG")
+
+#---------------------------------------------------------------------
+   
 
 import cv2
 import numpy as np
@@ -51,4 +63,7 @@ def extract_text_from_image(pages):
     text = pytesseract.image_to_string(pages)
     return text
 
+
+print(extract_text_from_image(pages[0]))  
+# This will print the extracted text from the first page of the PDF. 
 
