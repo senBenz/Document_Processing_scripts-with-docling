@@ -1,0 +1,87 @@
+{
+  "personal": {
+    "name": "SAAD AAQIL",
+    "location": "",
+    "phone": "63024-8651",
+    "email": "s.aaqil@mundiapolis.ma",
+    "links": []
+  },
+  "summary": "Futur ingénieur en informatique, je construis une expertise a du développement logiciel, des systemes embarqués et de la data science. Passionné par la conception de solutions intelligentes et scalables, je dans des projets techniques a fort impact afin de développer une vision d’ingénierie et orientée performance.",
+  "skills": {
+    "technical": [
+      "Supervised & Unsupervised Learning",
+      "Sickit-learn",
+      "Model Evaluation",
+      "framework web (angular / tailwind / Spring BOOT )",
+      "SQL",
+      "Java & python OOP",
+      "Flutter /Dart",
+      "Docker",
+      "git/github",
+      "Cloud (AWS)",
+      "UML"
+    ],
+    "soft": [
+      "esprit d’équipe",
+      "collaboration et communication"
+    ],
+    "languages": [
+      "Arabe",
+      "Anglais"
+    ]
+  },
+  "experience": [
+    {
+      "position": "Developeur IT",
+      "company": "Mundiapolis University, Honoris Group",
+      "dates": "Mar 2025 -Sept 2025",
+      "description": "Conception et Développement d’un écosystéme de télémedecine pour les zones rurale. Stack utilisé: React (web) / React Native expo (mobile)/ python Flask"
+    },
+    {
+      "position": "Télévendeur- Société Marocaine des Tabacs",
+      "company": "",
+      "dates": "juin 2024 - sept 2024",
+      "description": "Prospection téléphonique et vente de produits/services auprés d'une clientéle cible. Gestion d'un portefeuille clients et suivi des relances. Atteinte et dépassement des objectifs commerciaux fixés"
+    },
+    {
+      "position": "Stagiaire robotique - Bridgestone",
+      "company": "",
+      "dates": "Mar 2024 - Mai 2024",
+      "description": "Développement d’un robot pompier autonome pour les cas d’urgence avec un signal d’alarme. Outils: Arduino Uno / RT-OS / capteurs infra-rouge / module moteur /capteur de CO2 / antennes"
+    },
+    {
+      "position": "Stagiaire développement web - SOREAD 2M",
+      "company": "",
+      "dates": "Mar 2024 - Mai 2024",
+      "description": "Conception et développement d'une application web de gestion des stagiaires et des invités. Mise en place des fonctionnalités de gestion: ajout, modification, suppression et consultation des données. Stack utilisé: HTML /CSS / JavaScript / SQL / php"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Mundiapolis University",
+      "program": "Cycle génie Informatique",
+      "dates": "Sep 2024 - Présent"
+    },
+    {
+      "institution": "Ecole Supérieure de Téchnologie",
+      "program": "DUT",
+      "dates": "Sep 2022 - Juin 2024"
+    },
+    {
+      "institution": "Lycee Ocean Atlantique",
+      "program": "Baccalauréat scientifique Mention Bien",
+      "dates": "2022"
+    }
+  ],
+  "projects": [
+    "Développement d'un Model machine Learning de Classification des CV",
+    "Analyse et clustering de données avec K-means et PCA",
+    "« Développement d’un systeme RAG",
+    "Développement d’un chatBot personnalisé",
+    "Développement d’un Assistant nommé S_Help (offline - terminal Ul)",
+    "¢ Trust Pay ( application e-Banking)",
+    "Mise a niveau d’une architecture Cloud avec le monitoring",
+    "¢ Black man delivery ( site web commercial)",
+    "Dispositif de suivi de santé (état cardiaque real time avec le protocole MQTT)"
+  ]
+}
